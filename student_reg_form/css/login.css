@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(253, 252, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loginform{
+    width: min(500px,95%);
+    height: 700px;
+    border: 2px solid black;
+    backdrop-filter: blur(50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    transition: all s;
+    margin-right: 180px;
+}
+
+.loginform:hover{
+    box-shadow: 0 0 10px 0px rgb(6, 5, 8), 0 0 10px 0px rgb(252, 252, 254);
+    animation: blink 1s infinite;
+    background: transparent;
+
+}
+@keyframes blink{
+    0%,100%{
+    box-shadow: 0 0 10px 0px rgb(24, 11, 211), 0 0 50px 0px  rgb(10, 72, 10);
+  
+    }
+    40%,50%,60%{
+     box-shadow: 0 0 10px 0px  rgb(8, 99, 8), 0 0 50px 0px  rgb(253, 255, 253);
+  
+    }
+}
+
+.inputgroup{
+    position: relative;
+    height: 50px;
+    width: 420px;
+    margin-bottom: 20px;
+    
+}
+
+.inputgroup input{
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: solid 1px black;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    transition: all 200ms;
+}
+
+.inputgroup label{
+    position: absolute;
+    transition: all 200ms;
+    color: black;
+    font-size: 17px;
+   
+}
+
+.inputgroup input:hover +label,
+.inputgroup input:focus +label,
+.inputgroup input:valid +label
+{
+    transform: translateY(-20px);
+    color: rgb(18, 123, 23);
+}
+
+.inputgroup input:hover,
+.inputgroup input:focus,
+.inputgroup input:valid 
+{
+    border-bottom: solid 1px rgb(18, 123, 23);
+}
+
+.topmargin{
+    margin-top: 50px;
+}
+
+.topmarginlarge{
+    margin-top: 50px;
+}
+
+.divcallforaction{
+    width: 85%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.btnlogin{
+    border: none;
+    width: 100px;
+    height: 40px;
+    padding: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    transition: all 200ms;
+    margin-bottom: 90px;
+    margin-left: 60px
+}
+
+.btnlogin:hover{
+    box-shadow: 0 0 10px rgb(31, 216, 11);
+    transform: translateY(-5px);
+}
+
+.inactivecolor{
+    background-color: rgb(19, 138, 3);
+}
+
+.activecolor{
+    background-color: rgb(52, 178, 14);
+}
+
+
+.welcome{
+    margin-bottom: 0.5px;
+    text-align: center;
+}
+
+h4{
+    font-size: 16px;
+    color: rgb(21, 25, 227);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.welcome img{
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+}
+
+.message_error{
+    color: white;
+    font-size: 20px;
+    background-color: red;
+    padding: 10px;
+    border: none;
+    
+}
+
+.message_success{
+    color: white;
+    font-size: 20px;
+    background-color: red;
+    padding: 10px;
+    border: none;
+    
+}
+
+input::placeholder{
+    font-size: 14px;
+}
